@@ -3,7 +3,7 @@ from selenium import  webdriver
 #import pandas as pd
 
 
-driver = webdriver.Remote("http://localhost:4444/wd/hub", webdriver.DesiredCapabilities.HTMLUNIT.copy())
+driver = webdriver.PhantomJS()
 
 driver.get("https://scholarship-positions.com/inti-postgraduate-merit-international-scholarship-in-malaysia/2019/10/18/")
 content = driver.page_source
