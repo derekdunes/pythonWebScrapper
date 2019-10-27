@@ -26,4 +26,7 @@ print(title)
 
 detail = soup.find('div', attrs={'class':'entry-content'})
 
-print(detail)
+for p in detail.contents: #detail.children detail.descendants
+	print(p)
+
+
