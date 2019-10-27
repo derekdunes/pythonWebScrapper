@@ -18,7 +18,12 @@ content = driver.page_source
 soup = BeautifulSoup(content, 'html.parser')
 
 #scrape the div containing the content we want
-title = soup.find('h1', attrs={'class':'entry-title'})
+title_box = soup.find('h1', attrs={'class':'entry-title'})
 
+title = title_box.text.strip()
 
 print(title)
+
+detail = soup.find('div', attrs={'class':'entry-content'})
+
+print(detail)
