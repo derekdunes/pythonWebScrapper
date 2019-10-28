@@ -11,18 +11,20 @@ chrome_options.add_argument("--headless")
 driver = webdriver.Chrome(options=chrome_options)
 
 #connect to the url to be scrapped
-driver.get("https://scholarship-positions.com/inti-postgraduate-merit-international-scholarship-in-malaysia/2019/10/18/")
+#driver.get("https://scholarship-positions.com/inti-postgraduate-merit-international-scholarship-in-malaysia/2019/10/18/")
+#driver.get("https://scholarship-positions.com/graduate-student-internships-at-democracy-international/2019/03/11/")
+driver.get("google.com")
 content = driver.page_source
 
 #parse the content (html) using beatiful soup 
-soup = BeautifulSoup(content, 'html.parser')
+# soup = BeautifulSoup(content, 'html.parser')
 
-#scrape the div containing the content we want
-title_box = soup.find('h1', attrs={'class':'entry-title'})
+# #scrape the div containing the content we want
+# title_box = soup.find('h1', attrs={'class':'entry-title'})
 
-title = title_box.text.strip()
+# title = title_box.text.strip()
 
-print(title)
+print(content)
 
 #detail = soup.find('div', attrs={'class':'entry-content'})
 
