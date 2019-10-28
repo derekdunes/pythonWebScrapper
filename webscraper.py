@@ -24,9 +24,9 @@ title = title_box.text.strip()
 
 print(title)
 
-detail = soup.find('div', attrs={'class':'entry-content'})
+#detail = soup.find('div', attrs={'class':'entry-content'})
 
-for p in detail.contents: #detail.children detail.descendants
-	print(p)
+#for p in detail.contents: #detail.children detail.descendants
+#	print(p)
 
 
